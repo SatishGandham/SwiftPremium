@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+#right-container{float:right;background:red;width:80%}
+#content{width:75%;}
+#sb1{width:25%}
+#sb2{float:left}

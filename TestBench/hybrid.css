@@ -1,0 +1,4 @@
+@CHARSET "UTF-8";
+#wrapper{width:100%}
+#main-container,
+#navigation ul{width:1000px;margin:auto}

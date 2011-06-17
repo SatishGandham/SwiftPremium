@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{margin:0;padding:0}
+#wrapper{width:1000px;margin:auto}
+#header{height:100px;background:#333}
+
+#navigation{background:#000}
+#navigation ul li{list-style:none;display:inline}
+#navigation ul li a{padding:10px;}
+
+#content{height:600px;width:60%;background:#EEE;float:left}
+#sb1{height:600px;width:20%;background:#CCC;float:left}
+#sb2{height:600px;width:20%;background:#666;float:left}
+#footer{height:160px;background:#999}
+#copyright-container{height:40px;background:#333}
+.clear{clear:both}
+.div-content{margin:0 10px}
+</style>
+
+<link rel="stylesheet" type="text/css" href="full-width.css" title="full-width" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="hybrid.css" title="hybrid" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="fixed-width.css" title="fixed-width" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="centered.css" title="centered" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="right-sidebars.css" title="right-sidebars" media="screen" />
+<link rel="alternate stylesheet" type="text/css" href="left-sidebars.css" title="left-sidebars" media="screen" />
+	
+	
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="stylesheetToggle.js"></script>
+	<script type="text/javascript">
+	$(function()
+		{
+			// Call stylesheet init so that all stylesheet changing functions 
+			// will work.
+			$.stylesheetInit();
+			
+			// This code loops through the stylesheets when you click the link with 
+			// an ID of "toggler" below.
+			$('#toggler').bind(
+				'click',
+				function(e)
+				{
+					$.stylesheetToggle();
+					return false;
+				}
+			);
+			
+			// When one of the styleswitch links is clicked then switch the stylesheet to
+			// the one matching the value of that links rel attribute.
+			$('.styleswitch').bind(
+				'click',
+				function(e)
+				{
+					$.stylesheetSwitch(this.getAttribute('rel'));
+					return false;
+				}
+			);
+		}
+	);
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+	<div class="div-content">
+	</div>
+	</div>
+	
+	<div id="navigation">
+		<ul>
+		<li><a href="index.html?style=full-width" rel="full-width" class="styleswitch">full-width</a></li>
+		<li><a href="index.html?style=hybrid" rel="hybrid" class="styleswitch">hybrid</a></li>
+		<li><a href="index.html?style=fixed-width" rel="fixed-width" class="styleswitch">fixed-width</a></li>
+		<li><a href="index.html?style=centered" rel="centered" class="styleswitch">centered</a></li>
+		<li><a href="index.html?style=right-sidebars" rel="right-sidebars" class="styleswitch">right-sidebars</a></li>
+		<li><a href="index.html?style=left-sidebars" rel="left-sidebars" class="styleswitch">left-sidebars</a></li>
+		</ul>
+	</div>
+	
+	<div id="main-container">
+		<div id="right-container">
+			<div id="content">
+			<div class="div-content">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+
+<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+
+<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+
+<p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+			</div>
+			</div>
+			
+			<div id="sb1">	
+			<div class="div-content">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			
+			</div>
+			</div>
+		</div>
+			
+			<div id="sb2">
+			<div class="div-content">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			
+			</div>
+			</div>
+		</div>
+	<div class="clear" />
+	<div id="footer">
+	</div>
+	<div id="copyright-container">
+	</div>
+</div>
+</body>
+</html>
