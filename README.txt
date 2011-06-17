@@ -43,3 +43,6 @@ To develop a developer friendly version of SwiftPremium keeping intact all the g
 * CSS framework or no framework.
 * Options and functions prefix
 * 
+
+== Challenges ==
+* Ajaxified backend with custom CSS and JS files in the ownership of server admin and not the web user for security reasons.
